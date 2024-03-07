@@ -10,6 +10,7 @@ namespace Assets.Models
     public class SpellInfo
     {
         public SpellNames SpellName { get; set; }
+        public DateTime LastCastTime { get; set; }
         public float SpellCooldown { get; set; }
         public float SpellBaseDamage { get; set; }
         public float SpellRange { get; set; }
