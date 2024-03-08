@@ -6,13 +6,14 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using UnityEngine;
 
-namespace Assets
+namespace Assets.Models
 {
     public class SubShipInfo
     {
         public SubShipDesignInfo SubShipDesignData { get; set; }
-        
+        public GameObject SubShipGameObject { get; set; }
         public Alliances Alliance { get; set; }
 
         public decimal MaxHealth { get; set; }
