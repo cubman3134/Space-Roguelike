@@ -15,11 +15,16 @@ public class SpellBL
         {
             return;
         }
-        var target = GetTargetForSpell(caster, spellToCast, subShips);
-        if (target == null)
+        SubShipInfo spellTargetSubShip = null;
+        if (spellToCast.SpellTargetType != SpellTargetTypes.NoTarget)
         {
-            return;
+            spellTargetSubShip = GetTargetForSpell(caster, spellToCast, subShips);
+            if (spellTargetSubShip == null)
+            {
+                return;
+            }
         }
+        CastSpell(caster, spellTargetSubShip, spellToCast);
     }
 
     public static SubShipInfo GetTargetForSpell(SubShipInfo caster, SpellInfo spell, List<SubShipInfo> subShips)
@@ -45,5 +50,16 @@ public class SpellBL
             return subShip;
         }
         return null;
+    }
+
+    public static void CastSpell(SubShipInfo caster, SubShipInfo target, SpellInfo spell)
+    {
+        switch (spell.SpellName)
+        {
+            case SpellNames.CannonBlast:
+                break;
+            default: 
+                break;
+        }
     }
 }

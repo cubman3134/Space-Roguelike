@@ -19,7 +19,8 @@ namespace Assets.Models
         public SpellProjectileTypes SpellProjectileType { get; set; }
         public SpellTargetTypes SpellTargetType { get; set; }
         public SpellTypes SpellType { get; set; }
-        public SpellInfo(SpellNames spellName, float spellCooldown, float spellBaseDamage, float spellRange, float spellDuration, SpellEffectTypes spellEffectType, SpellProjectileTypes spellProjectileType, SpellTargetTypes spellTargetType, SpellTypes spellType)
+        public SpellMovementTypes SpellMovementType { get; set;}
+        public SpellInfo(SpellNames spellName, float spellCooldown, float spellBaseDamage, float spellRange, float spellDuration, SpellEffectTypes spellEffectType, SpellProjectileTypes spellProjectileType, SpellTargetTypes spellTargetType, SpellTypes spellType, SpellMovementTypes spellMovementType)
         {
             SpellName = spellName;
             SpellCooldown = spellCooldown;
@@ -30,6 +31,7 @@ namespace Assets.Models
             SpellProjectileType = spellProjectileType;
             SpellTargetType = spellTargetType;
             SpellType = spellType;
+            SpellMovementType = spellMovementType;
         }
     }
 }
